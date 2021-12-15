@@ -1,0 +1,115 @@
+<!doctype html>
+{% load static %}
+
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block title %}
+    {% endblock title %}
+
+    <link rel="ARES icon" href="{% static "img/ares_logo.png"%}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('.navbar-nav li a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+          });
+        });
+    </script>
+    <link rel='stylesheet' type='text/css' href="{% static 'style.css' %}">
+
+
+
+  </head>
+  <body>
+        <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="{% static "img/ares_logo_2.png"%}" ></a>
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class=" navbar-nav ml-auto">
+            <li class="nav-item {% if page_type == "index" %}active{% endif %}">
+              <a class="nav-link" href={% url 'index' %}>Home</a>
+            </li>
+            <li class="nav-item {% if page_type == "aboutus" %}active{% endif %}">
+              <a class="nav-link" href={% url 'list' %}>About us</a>
+            </li>
+            <li class="nav-item {% if page_type == "history" %}active{% endif %}">
+              <a class="nav-link" href={% url 'index2' %}>History</a>
+            </li>
+            <li class="nav-item {% if page_type == "members" %}active{% endif %}">
+              <a class="nav-link" href={% url 'index2' %}>Members</a>
+            </li>
+            <li class="nav-item {% if page_type == "records" %}active{% endif %}">
+              <a class="nav-link" href={% url 'records' %}>Records</a>
+            </li>
+            <li class="nav-item {% if page_type == "contact" %}active{% endif %}">
+              <a class="nav-link" href={% url 'contact' %}>Connect</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+
+    <!--- Footer -->
+    <footer>
+      <div class=" container-fluid padding">
+        <div class="row">
+          <div class="col-md-4 text-left px-2">
+            <div class="text-center">
+              <a href="#"><img  src="{% static "img/ares_logo_2.png"%}" ></a>
+            </div>
+            <div class="text-left px-5">
+              <hr class="light">
+              <p>住所 : &#12306;468-8511 名古屋市天白区久方二丁目12番地1　豊田工業大学</p>
+              <p>Email : spartan.ares.tti@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-left px-5">
+            <hr class="light">
+            <h5>Internal Links</h5>
+            <hr class="light">
+            <p><a href={% url 'edit' %}>データ編集(メンバー専用)</a></p>
+            <p><a href="#">Monday: 9am - 5pm</a></p>
+            <p><a href="#">Monday: 9am - 5pm</a></p>
+          </div>
+          <div class="col-md-4 social text-left px-5">
+            <hr class="light">
+            <h5>Connect</h5>
+            <hr class="light">
+            <div class="text-left">
+              <a href="#"><i class="fab fa-twitter fa-xs	"></i></a>
+              <a href="https://www.toyota-ti.ac.jp/"><img class="img-responsive" src="{% static "img/TTI-logo.png"%}"></a>
+              <a href="mailto:spartan.ares.tti@gmail.com"><i class="fas fa-envelope fa-xs "></i></a>
+              <a href="#" hidden><i class="fab fa-youtube fa-xs " ></i></a>
+            </div>
+            </div>
+          <div class="col-12 text-center pt-5">
+            <h5>Copyright &copy; 2020 Toyota Technological Institute SPARTAN RACE Circle ARES</h5>
+          </div>		
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+  </body>
+</html>

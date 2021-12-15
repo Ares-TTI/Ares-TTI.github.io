@@ -1,0 +1,29 @@
+{% extends 'baseboard.html' %}
+
+{% block customcss %}
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock customcss %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+    <div id="social-icon">
+        <h2 class="mb-4">Twytter <i class="fab fa-twitter fa-1x"></i></h2>
+    </div>
+    <pc lass="pb-0">ようこそ、<strong>{{request.user}}</strong>さん</p>
+    <a href={% url 'logout' %} class="small">ログアウト</a>
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container"> 
+    <a href={% url 'create' %}>新規投稿</a>
+    {% for item in object_list %}  
+    <div class="alert alert-success" role="alert">
+        <p>タイトル：<a href={% url 'detail' item.pk %}>{{item.title}}</a></p>
+        <p>投稿者：{{item.author}}</p>
+        <a href={% url 'good' item.pk %} class="btn btn-primary btn-sm active" role="button" aria-pressed="true"> {{ item.good }}  いいね</a>
+        <a href={% url 'read' item.pk %} class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">{{ item.read }}  既読</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>TTI SPARTAN RACE Circle ARES</title>
+
+    <link rel="ARES icon" href="./static/img/ares_logo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('.navbar-nav li a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+          });
+        });
+    </script>
+    <link rel='stylesheet' type='text/css' href="./static/style.css">
+
+
+
+  </head>
+  <body>
+        <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./static/img/ares_logo_2.png"></a>
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class=" navbar-nav ml-auto">
+            <li class="nav-item {% if page_type == "index" %}active{% endif %}">
+              <a class="nav-link" href="#">Home</a>
+            <!-- </li>
+            <li class="nav-item {% if page_type == "aboutus" %}active{% endif %}">
+              <a class="nav-link" href='./templetes/aboutus.html'>About us</a>
+            </li> -->
+            <!-- <li class="nav-item {% if page_type == "history" %}active{% endif %}">
+              <a class="nav-link" href={% url 'index2' %}>History</a>
+            </li>
+            <li class="nav-item {% if page_type == "members" %}active{% endif %}">
+              <a class="nav-link" href={% url 'index2' %}>Members</a> -->
+            <!-- </li>
+            <li class="nav-item {% if page_type == "records" %}active{% endif %}">
+              <a class="nav-link" href={% url 'records' %}>Records</a>
+            </li> -->
+            <li class="nav-item {% if page_type == "contact" %}active{% endif %}">
+              <a class="nav-link" href='./contact.html'>Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--- Two Column Section -->
+    <div class="container-fluid padding bg-white">
+      <div class=" row padding main-bg">
+        <div class="col-md-5">
+          <h2><strong>SPARTAN RACE</strong>について</h2>
+          <p>『SPARTAN RACE』はアメリカのバーモント州で始まり、世界で最も参加者が増加しているスポーツです。</p>
+          <div class="text-center">
+            <a href="https://www.spartanrace.jp/ja" class="btn btn-danger mb-3">read more  <strong>SPARTAN RACE</strong></a>
+          </div>
+          <br>
+          <h2><strong>ARES</strong>について</h2>
+          <p>スパルタンレースサークルARESは、国内で年数回行われているスパルタンレースに参加するために、大学内のトレーニングルームや近くの施設を利用して筋トレや障害物の練習を行っている、大学では国内初(?)のスパルタンレースサークルです！<br>2019年9月に発足した新進気鋭のサークルで、現在学部・修士あわせて22人のメンバーで、定期的に活動しています！<br>全く運動経験のない人から、日々肉体に語り合っているような筋肉ゴリゴリの人まで、様々なメンバーが集まってる、凄く面白いサークルです！<br><br>次回大会出場に向け、より活発なサークルにしたいという強い思いもあり、新規メンバーを絶賛募集中です！！<br>
+            ゴリゴリに筋肉を追い込みたい人だけでなく、運動初心者や女性の方、スパルタンレースや筋トレに少しでも興味のある方、ぜひ一度、気軽にサークル見学しにきてくださいね！<br>十人十色のサークルメンバーが、誠心誠意対応します！<br><br>普段何気ない日常に飽き飽きしている人、中学・高校の頃のように全力で何かに挑戦したい人、最近運動不足だなと密かに感じている人には、特にオススメのサークルです！<br>ぜひ私たちARESメンバーの一員として、一緒に何気ない日常をより良いものに変え、自分の可能性に挑戦してみませんか！？</p>
+          <div class="text-center">
+            <a href="#" class="btn btn-danger mb-3">read more <strong>ARES</strong><br>(building now...)</a>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <img src="./static/img/throw.jpg" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <!--- Footer -->
+    <footer>
+      <div class=" container-fluid padding">
+        <div class="row">
+          <div class="col-md-4 text-left px-2">
+            <div class="text-center">
+              <a href="#"><img  src="./static/img/ares_logo_2.png" ></a>
+            </div>
+            <div class="text-left px-5">
+              <hr class="light">
+              <p>住所 : &#12306;468-8511 名古屋市天白区久方二丁目12番地1　豊田工業大学</p>
+              <p>Email : spartan.ares.tti@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-left px-5">
+            <hr class="light">
+            <h5>Internal Links</h5>
+            <hr class="light">
+            <p><a href={% url 'edit' %}>データ編集(メンバー専用)</a></p>
+            <p><a href="#">Monday: 9am - 5pm</a></p>
+            <p><a href="#">Monday: 9am - 5pm</a></p>
+          </div>
+          <div class="col-md-4 social text-left px-5">
+            <hr class="light">
+            <h5>Connect</h5>
+            <hr class="light">
+            <div class="text-left">
+              <a href="#"><i class="fab fa-twitter fa-xs	"></i></a>
+              <a href="https://www.toyota-ti.ac.jp/"><img class="img-responsive" src="./static/img/TTI-logo.png"></a>
+              <a href="mailto:spartan.ares.tti@gmail.com"><i class="fas fa-envelope fa-xs "></i></a>
+              <a href="#" hidden><i class="fab fa-youtube fa-xs " ></i></a>
+            </div>
+            </div>
+          <div class="col-12 text-center pt-5">
+            <h5>Copyright &copy; 2020 Toyota Technological Institute SPARTAN RACE Circle ARES</h5>
+          </div>		
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+  </body>
+</html>

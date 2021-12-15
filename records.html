@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Records-TTI SPARTAN RACE Circle ARES</title>
+{% endblock title %}
+
+
+{% block content %}
+<!--- Three Column Section -->
+<div class=" container-fluid padding">
+	<div class="row text-center padding results main-bg">
+		<div class="col-12">
+			<h2> <strong>レース結果</strong></h2>
+		</div>
+		<hr>
+		<div class="col-12">
+			<p class="lead">ARESでは、4タイプのレースの完走および入賞、そして<a href="https://www.spartanrace.jp/ja/race/race-types/race-types-overview?article=24715">トライフェクタ</a>の獲得を目指しています。</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 ">
+			<img src="{% static "img/medal_beast.png"%}" alt="">
+			<a class="text-success" href="https://www.spartanrace.jp/ja/race/race-types/race-types-overview?article=23"><strong class="border-bottom border-success">BEAST</strong></a>
+			<p>メダル獲得数：０枚</p>
+			<p>Buidt with the latest version of HTML, HTML5.</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">	
+			<img src="{% static "img/medal_super.png"%}" alt="">
+			<a class="text-primary" href="https://www.spartanrace.jp/ja/race/race-types/race-types-overview?article=21"><strong class="border-bottom border-primary">SUPER</strong></a>
+			<p>メダル獲得数：２枚</p>
+			<p>Buidt with the lotest version of Bootstrao, Bootstrap 4.</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<img src="{% static "img/medal_sprint.png"%}" alt="">
+			<a class="text-danger" href="https://www.spartanrace.jp/ja/race/race-types/race-types-overview?article=1"><strong class="border-bottom border-danger">SPRINT</strong></a>
+			<p>メダル獲得数：８枚</p>
+			<p>Buidt with the lotest version of Bootstrao, Bootstrap 4.</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<img src="{% static "img/medal_stadion.png"%}" alt="">
+			<a class="text-warning" href="https://www.spartanrace.jp/ja/race/race-types/race-types-overview?article=23"><strong class=" border-bottom border-warning">STADION</strong></a>
+			<p>メダル獲得数：１０枚</p>
+			<p>Buidt with the lotest version of Bootstrao, Bootstrap 4.</p>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
